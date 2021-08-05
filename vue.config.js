@@ -17,7 +17,4 @@ module.exports = {
       chunkFilename: "js/[name].js",
     },
   },
-  devServer: {
-    proxy: "https://www.digikala.com/front-end/",
-  },
 };

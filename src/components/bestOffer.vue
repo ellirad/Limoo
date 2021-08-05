@@ -1,11 +1,11 @@
 <template>
   <div class="best-offer">
     <div class="row">
-      <h3 class="title">
+      <h3 class="title--primary">
         تخفیفات هیجان انگیز
       </h3>
 
-      <button class="btn btn--primary btn--medium test">
+      <button class="btn btn--primary btn--medium best-offer__button">
         مشاهده همه &larr;
       </button>
     </div>
@@ -81,7 +81,6 @@ export default {
 
       const len = this.products.length;
       this.current = (this.current + (dir % len) + len) % len;
-      console.log(this.current, "current");
 
       this.showMore();
     },
@@ -107,7 +106,7 @@ export default {
 
       for (let i = startAt; i <= endAt; i++) {
         if (i >= this.products.length) {
-          console.log("teaw");
+          console.log("greater");
         } else {
           list.push(i);
         }
@@ -120,6 +119,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/components/best-offer.scss";
+@import "../assets/scss/pages/best-offer.scss";
 @import "../assets/scss/components/slider.scss";
 </style>

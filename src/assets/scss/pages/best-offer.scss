@@ -1,0 +1,14 @@
+.best-offer {
+  background-image: linear-gradient(
+    to bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  margin: 5rem 0 0;
+  padding: 6rem 4rem 4rem;
+
+  &__button {
+    margin-right: auto;
+    background-color: transparent;
+  }
+}

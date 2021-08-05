@@ -27,12 +27,6 @@
 .basket {
   position: relative;
 
-  &__link {
-    color: $color-grey-dark-3;
-    font-size: 1.5rem;
-    text-decoration: none;
-    margin-left: 6rem;
-  }
   &:hover &__modal {
     display: block;
     animation: moveInUp 0.75s;
@@ -40,10 +34,12 @@
 
   &__modal {
     position: absolute;
-    left: 6rem;
+    left: 0;
+    top: 10rem;
     display: none;
   }
 }
+
 .search {
   flex: 0 0 40%;
   display: flex;
@@ -103,26 +99,26 @@
           transition: all 0.5s;
         }
 
+        // Line
+        &::after {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 0%;
+          content: ".";
+          color: transparent;
+          background: $color-primary;
+          height: 1px;
+        }
+
         &:hover {
           color: $color-primary;
         }
       }
     }
   }
-}
-
-// Animation
-.navigation .mega-menu .list-item .link:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0%;
-  content: ".";
-  color: transparent;
-  background: $color-primary;
-  height: 1px;
 }
 
 .navigation .mega-menu .list-item .link:hover:after {
@@ -161,14 +157,13 @@
       content: ">";
       display: inline-block;
       position: absolute;
-      // padding-right: 6px;
       left: -20px;
       padding-top: 1.5px;
       color: $color-primary;
     }
 
     & a {
-      color: #aaa;
+      color: $color-grey-dark-2;
       font-size: inherit;
       text-decoration: none;
     }

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <Home />
+    <component :is="routedComponent"></component>
     <Footer />
   </div>
 </template>
@@ -10,11 +10,30 @@
 import Footer from "./views/Footer.vue";
 import Header from "./views/Header.vue";
 import Home from "./views/Home.vue";
+import Survey from "./views/Survey.vue";
+import NotFound from "./views/NotFound.vue";
+
+const routes = {
+  "/": Home,
+  "/survey": Survey,
+};
 
 export default {
-  components: { Header, Home, Footer },
+  components: { Header, Footer },
 
   name: "App",
+
+  data() {
+    return {
+      currentRoute: window.location.pathname,
+    };
+  },
+
+  computed: {
+    routedComponent() {
+      return routes[this.currentRoute] || NotFound;
+    },
+  },
 };
 </script>
 

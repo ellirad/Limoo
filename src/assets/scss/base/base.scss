@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-weight: 300;
+  line-height: 1.6;
+  color: $color-grey-dark-1;
+  direction: rtl;
+  font-size: $default-font-size;
+  font-family: $font-primary;
+}
+
+html,
+body {
+  width: 100vw;
+  overflow-x: hidden !important;
+}

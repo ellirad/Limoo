@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="header">
+      <!------------------------------ UPPER HEADER --------------------------------->
       <div class="upper-header d-flex">
         <img src="../assets/img/logo.png" alt="logo" class="logo" />
 
@@ -16,9 +17,11 @@
           <svg class="basket-icon icon--primary cursor-pointer">
             <use xlink:href="@/assets/svgs/light.svg#shopping-cart"></use>
           </svg>
+          <basket-modal class="basket__modal" />
         </div>
       </div>
 
+      <!------------------------------ BELOW HEADER --------------------------------->
       <div class="below-header">
         <nav class="navigation">
           <ul class="mega-menu">
@@ -37,6 +40,7 @@
                 <li><a href="#">اپل</a></li>
               </ul>
             </li>
+
             <li class="list-item">
               <a href="#" class="link">
                 <svg class="nav-icon icon--primary cursor-pointer">
@@ -52,6 +56,7 @@
                 <li><a href="#">اپل</a></li>
               </ul>
             </li>
+
             <li class="list-item">
               <a href="#" class="link">
                 <svg class="nav-icon icon--primary cursor-pointer">
@@ -67,6 +72,7 @@
                 <li><a href="#">اپل</a></li>
               </ul>
             </li>
+
             <li class="list-item">
               <a href="#" class="link">
                 <svg class="nav-icon icon--primary cursor-pointer">
@@ -82,6 +88,7 @@
                 <li><a href="#">اپل</a></li>
               </ul>
             </li>
+
             <li class="list-item">
               <a href="#" class="link">
                 <svg class="nav-icon icon--primary cursor-pointer">
@@ -101,18 +108,17 @@
         </nav>
       </div>
     </div>
-    <slider />
   </div>
 </template>
 
 <script>
-import slider from "../components/slider.vue";
+import basketModal from "../components/basketModal.vue";
 
 export default {
-  components: { slider },
+  components: { basketModal },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/components/header.scss";
+@import "../assets/scss/layout/header.scss";
 </style>

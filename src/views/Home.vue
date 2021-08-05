@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <slider />
     <best-offer />
     <setup />
   </div>
@@ -8,9 +9,10 @@
 <script>
 import bestOffer from "../components/bestOffer.vue";
 import Setup from "../components/setup.vue";
+import Slider from "../components/slider.vue";
 
 export default {
-  components: { bestOffer, Setup },
+  components: { bestOffer, Setup, Slider },
 };
 </script>
 

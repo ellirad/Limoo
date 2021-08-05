@@ -1,0 +1,17 @@
+.icon {
+  &--primary {
+    fill: $color-primary;
+  }
+
+  &--secondary {
+    fill: $color-secondary;
+  }
+
+  &--white {
+    fill: $color-white;
+  }
+
+  &--grey {
+    fill: $color-grey-dark-2;
+  }
+}
