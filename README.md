@@ -1,4 +1,4 @@
-# digikala-test
+# limoo-test
 
 ## Project setup
 ```
